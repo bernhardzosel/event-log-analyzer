@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>event_log_analyzer package &mdash; Event_Log_Analyzer 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Event_Log_Analyzer
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">event_log_analyzer package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-event_log_analyzer.importer">event_log_analyzer.importer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-event_log_analyzer.adapter">event_log_analyzer.adapter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-event_log_analyzer.event_log">event_log_analyzer.event_log module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-event_log_analyzer.validate">event_log_analyzer.validate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#event-log-analyzer-pattern-library-package">event_log_analyzer.pattern_library package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-event_log_analyzer.pattern_library.pattern">event_log_analyzer.pattern_library.pattern module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#event-log-analyzer-pattern-library-manufacturing-scheduling-pattern-module">event_log_analyzer.pattern_library.manufacturing_scheduling_pattern module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#event-log-analyzer-pattern-library-pattern-structure-module">event_log_analyzer.pattern_library.pattern_structure module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-event_log_analyzer.utils">event_log_analyzer.utils module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Event_Log_Analyzer</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">&lt;no title&gt;</a> &raquo;</li>
+      <li>event_log_analyzer package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/event_log_analyzer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="event-log-analyzer-package">
+<h1>event_log_analyzer package<a class="headerlink" href="#event-log-analyzer-package" title="Permalink to this headline"></a></h1>
+<section id="module-event_log_analyzer.importer">
+<span id="event-log-analyzer-importer-module"></span><h2>event_log_analyzer.importer module<a class="headerlink" href="#module-event_log_analyzer.importer" title="Permalink to this headline"></a></h2>
+<p>This module contains thr functionality to import new event logs.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="event_log_analyzer.importer.import_csv_file">
+<span class="sig-prename descclassname"><span class="pre">event_log_analyzer.importer.</span></span><span class="sig-name descname"><span class="pre">import_csv_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.importer.import_csv_file" title="Permalink to this definition"></a></dt>
+<dd><p>Import the event log from the file format into a pandas dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>config_file</strong> – the path to a JSON configuration file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the pandas dataframe without any modification (only the string timestamps are converted to real timestamps)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>raw_dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="event_log_analyzer.importer.import_event_log">
+<span class="sig-prename descclassname"><span class="pre">event_log_analyzer.importer.</span></span><span class="sig-name descname"><span class="pre">import_event_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">StorageType.COLUMN_BASED_AT_ONCE</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.importer.import_event_log" title="Permalink to this definition"></a></dt>
+<dd><p>Import and validate an event log into the internal representation of an EventLogStorage object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>config_file</strong> – the path to a JSON configuration file</p></li>
+<li><p><strong>storage_type</strong> (<a class="reference internal" href="#event_log_analyzer.event_log.StorageType" title="event_log_analyzer.event_log.StorageType"><em>StorageType</em></a>) – the storage type of the database where we want to import the log, default StorageType.COLUMN_BASED_AT_ONCE</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>EventLogStorage object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>log</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="event_log_analyzer.importer.import_xes_file">
+<span class="sig-prename descclassname"><span class="pre">event_log_analyzer.importer.</span></span><span class="sig-name descname"><span class="pre">import_xes_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.importer.import_xes_file" title="Permalink to this definition"></a></dt>
+<dd><p>Import the event log from the file format into a pandas dataframe with timestamps</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>config_file</strong> – the path to a JSON configuration file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the pandas dataframe without any modification</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>raw_dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-event_log_analyzer.adapter">
+<span id="event-log-analyzer-adapter-module"></span><h2>event_log_analyzer.adapter module<a class="headerlink" href="#module-event_log_analyzer.adapter" title="Permalink to this headline"></a></h2>
+<p>This module contains all functionality related to the adaption process to transform new event logs in a unified format</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.ActivityInstanceAdder">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.adapter.</span></span><span class="sig-name descname"><span class="pre">ActivityInstanceAdder</span></span><a class="headerlink" href="#event_log_analyzer.adapter.ActivityInstanceAdder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.adapter.Adapter" title="event_log_analyzer.adapter.Adapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.adapter.Adapter</span></code></a></p>
+<p>adds an activity instance, if not already present (only applicable to logs in atomic format with ‘Timestamp’ attribute -&gt; TimestampRenamer needs to be applied before)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.ActivityInstanceAdder.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.adapter.ActivityInstanceAdder.transform" title="Permalink to this definition"></a></dt>
+<dd><p>transforms the given dataframe and returns it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>json</em>) – the configuration file</p></li>
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – the event log as a data frame that should be transformed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns the transformed data frame</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.Adapter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.adapter.</span></span><span class="sig-name descname"><span class="pre">Adapter</span></span><a class="headerlink" href="#event_log_analyzer.adapter.Adapter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Adapter interface which every adapter needs to implement</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.Adapter.transform">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.adapter.Adapter.transform" title="Permalink to this definition"></a></dt>
+<dd><p>transforms the given dataframe and returns it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>json</em>) – the configuration file</p></li>
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – the event log as a data frame that should be transformed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns the transformed data frame</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.ColumnRenamer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.adapter.</span></span><span class="sig-name descname"><span class="pre">ColumnRenamer</span></span><a class="headerlink" href="#event_log_analyzer.adapter.ColumnRenamer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.adapter.Adapter" title="event_log_analyzer.adapter.Adapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.adapter.Adapter</span></code></a></p>
+<p>maps all attributes names as specified in the config file (this adapter should be applied after all other adapters that need the original attribute names have been applied)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.ColumnRenamer.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.adapter.ColumnRenamer.transform" title="Permalink to this definition"></a></dt>
+<dd><p>transforms the given dataframe and returns it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>json</em>) – the configuration file</p></li>
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – the event log as a data frame that should be transformed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns the transformed data frame</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.EventToIntervalLog">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.adapter.</span></span><span class="sig-name descname"><span class="pre">EventToIntervalLog</span></span><a class="headerlink" href="#event_log_analyzer.adapter.EventToIntervalLog" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.adapter.Adapter" title="event_log_analyzer.adapter.Adapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.adapter.Adapter</span></code></a></p>
+<p>if a log is given in atomic format, this adapter converts it to interval event log format (only applicable if log contains ‘Job’, ‘Machine’, ‘Timestamp’ and ‘Transaction_Type’ attributes)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.EventToIntervalLog.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.adapter.EventToIntervalLog.transform" title="Permalink to this definition"></a></dt>
+<dd><p>transforms the given dataframe and returns it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>json</em>) – the configuration file</p></li>
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – the event log as a data frame that should be transformed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns the transformed data frame</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.EventToIntervalLog.transform_without_pm4py">
+<span class="sig-name descname"><span class="pre">transform_without_pm4py</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.adapter.EventToIntervalLog.transform_without_pm4py" title="Permalink to this definition"></a></dt>
+<dd><p>this method shows how the transform() method could be implemented without pm4py</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.IntervalToEventLogTransformer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.adapter.</span></span><span class="sig-name descname"><span class="pre">IntervalToEventLogTransformer</span></span><a class="headerlink" href="#event_log_analyzer.adapter.IntervalToEventLogTransformer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.adapter.Adapter" title="event_log_analyzer.adapter.Adapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.adapter.Adapter</span></code></a></p>
+<p>if a log is given in interval format, this adapter converts it to atomic event log format (two timestamps ‘Start’ and ‘Complete’ are required -&gt; TimestampRenamer needs to be applied before)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.IntervalToEventLogTransformer.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.adapter.IntervalToEventLogTransformer.transform" title="Permalink to this definition"></a></dt>
+<dd><p>transforms the given dataframe and returns it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>json</em>) – the configuration file</p></li>
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – the event log as a data frame that should be transformed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns the transformed data frame</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.RowIDAdder">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.adapter.</span></span><span class="sig-name descname"><span class="pre">RowIDAdder</span></span><a class="headerlink" href="#event_log_analyzer.adapter.RowIDAdder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.adapter.Adapter" title="event_log_analyzer.adapter.Adapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.adapter.Adapter</span></code></a></p>
+<p>maps a given row id to the Row_ID attribute, if nothing is specified a new row column id is added to the log</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.RowIDAdder.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.adapter.RowIDAdder.transform" title="Permalink to this definition"></a></dt>
+<dd><p>transforms the given dataframe and returns it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>json</em>) – the configuration file</p></li>
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – the event log as a data frame that should be transformed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns the transformed data frame</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.Sorter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.adapter.</span></span><span class="sig-name descname"><span class="pre">Sorter</span></span><a class="headerlink" href="#event_log_analyzer.adapter.Sorter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.adapter.Adapter" title="event_log_analyzer.adapter.Adapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.adapter.Adapter</span></code></a></p>
+<p>sorts the event log if this is not already done by default</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.Sorter.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.adapter.Sorter.transform" title="Permalink to this definition"></a></dt>
+<dd><p>transforms the given dataframe and returns it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>json</em>) – the configuration file</p></li>
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – the event log as a data frame that should be transformed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns the transformed data frame</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.TimestampModifier">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.adapter.</span></span><span class="sig-name descname"><span class="pre">TimestampModifier</span></span><a class="headerlink" href="#event_log_analyzer.adapter.TimestampModifier" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.adapter.Adapter" title="event_log_analyzer.adapter.Adapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.adapter.Adapter</span></code></a></p>
+<p>transforms all timestamps, indicated in the config file, to a common format (must be done before timestamps are renamed)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.TimestampModifier.get_sec">
+<span class="sig-name descname"><span class="pre">get_sec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.adapter.TimestampModifier.get_sec" title="Permalink to this definition"></a></dt>
+<dd><p>converts a timestamp in HH:mm:ss format to seconds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>time_str</strong> (<em>str</em>) – a string in the following format HH:mm:ss, where the hours are continuous, i.e. this timestamp can be considered as duration</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>duration in seconds</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.TimestampModifier.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.adapter.TimestampModifier.transform" title="Permalink to this definition"></a></dt>
+<dd><p>transforms the given dataframe and returns it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>json</em>) – the configuration file</p></li>
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – the event log as a data frame that should be transformed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns the transformed data frame</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.TimestampRenamer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.adapter.</span></span><span class="sig-name descname"><span class="pre">TimestampRenamer</span></span><a class="headerlink" href="#event_log_analyzer.adapter.TimestampRenamer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.adapter.Adapter" title="event_log_analyzer.adapter.Adapter"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.adapter.Adapter</span></code></a></p>
+<p>maps all timestamp attribute names as specified in the config file (in atomic event log, we map them to ‘Timestamp’; in interval log, we map them to ‘Start’ and ‘Complete’ timestamps)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.adapter.TimestampRenamer.transform">
+<span class="sig-name descname"><span class="pre">transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.adapter.TimestampRenamer.transform" title="Permalink to this definition"></a></dt>
+<dd><p>transforms the given dataframe and returns it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cfg</strong> (<em>json</em>) – the configuration file</p></li>
+<li><p><strong>df</strong> (<em>pandas.DataFrame</em>) – the event log as a data frame that should be transformed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>returns the transformed data frame</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-event_log_analyzer.event_log">
+<span id="event-log-analyzer-event-log-module"></span><h2>event_log_analyzer.event_log module<a class="headerlink" href="#module-event_log_analyzer.event_log" title="Permalink to this headline"></a></h2>
+<p>This module is responsible for storing and managing the event log data.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.EventLogStorage">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.event_log.</span></span><span class="sig-name descname"><span class="pre">EventLogStorage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cfg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">StorageType.ROW_BASED</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.event_log.EventLogStorage" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The EventLogStorage object stores all information about a given event log. To itialize the object, the dataframe that stores the event log already needs to be in a correct format, adaption needs to be done before!</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.EventLogStorage._con">
+<span class="sig-name descname"><span class="pre">_con</span></span><a class="headerlink" href="#event_log_analyzer.event_log.EventLogStorage._con" title="Permalink to this definition"></a></dt>
+<dd><p>the database connection</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Connection</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.EventLogStorage._dataframe">
+<span class="sig-name descname"><span class="pre">_dataframe</span></span><a class="headerlink" href="#event_log_analyzer.event_log.EventLogStorage._dataframe" title="Permalink to this definition"></a></dt>
+<dd><p>the actual event log data</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.EventLogStorage._config">
+<span class="sig-name descname"><span class="pre">_config</span></span><a class="headerlink" href="#event_log_analyzer.event_log.EventLogStorage._config" title="Permalink to this definition"></a></dt>
+<dd><p>the configuration file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>json</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.EventLogStorage._storage_type">
+<span class="sig-name descname"><span class="pre">_storage_type</span></span><a class="headerlink" href="#event_log_analyzer.event_log.EventLogStorage._storage_type" title="Permalink to this definition"></a></dt>
+<dd><p>specifies the data layout used in the event log storage</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#event_log_analyzer.event_log.StorageType" title="event_log_analyzer.event_log.StorageType">StorageType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.EventLogStorage.add_new_dataframe">
+<span class="sig-name descname"><span class="pre">add_new_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.event_log.EventLogStorage.add_new_dataframe" title="Permalink to this definition"></a></dt>
+<dd><p>validates the log and then adds it into the EventLogStorage database and the database is optimized (e.g. by creating indexes)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>new_log</strong> (<em>pandas.DataFrame</em>) – the event log needs to be in the goal format, i.e. in atomic event log form with one timestamp “Timestamp” in a pandas timestamp format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.EventLogStorage.create_interval_log">
+<span class="sig-name descname"><span class="pre">create_interval_log</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.event_log.EventLogStorage.create_interval_log" title="Permalink to this definition"></a></dt>
+<dd><p>if possible construct an interval log out of the stored atomic event log and save it into the database as a separate table</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.EventLogStorage.get_event_log">
+<span class="sig-name descname"><span class="pre">get_event_log</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.event_log.EventLogStorage.get_event_log" title="Permalink to this definition"></a></dt>
+<dd><p>loads the event log from the database</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>dataframe</strong> – the whole event log from the data base as a data frame</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.EventLogStorage.get_interval_log">
+<span class="sig-name descname"><span class="pre">get_interval_log</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.event_log.EventLogStorage.get_interval_log" title="Permalink to this definition"></a></dt>
+<dd><p>loads the interval log from the database</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>dataframe</strong> – the whole interval log from the data base as a data frame</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.EventLogStorage.get_interval_sequence">
+<span class="sig-name descname"><span class="pre">get_interval_sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">needed_columns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.event_log.EventLogStorage.get_interval_sequence" title="Permalink to this definition"></a></dt>
+<dd><p>groups the interval log database and returns a generator object of the sequence of the given attribute as a generator object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attr</strong> (<em>str</em>) – the attribute by which the event log should be grouped</p></li>
+<li><p><strong>needed_columns</strong> (<em>List</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – a list of attributes/columns that need to be accessed, by default [] (the empty list stands for all attributes)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p><em>pandas.DataFrame</em> – The next interval sequence as a dataframe.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.EventLogStorage.get_sequence">
+<span class="sig-name descname"><span class="pre">get_sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">needed_columns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.event_log.EventLogStorage.get_sequence" title="Permalink to this definition"></a></dt>
+<dd><p>groups the event log database and returns a generator object of the sequence of the given attribute as a generator object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attr</strong> (<em>str</em>) – the attribute by which the event log should be grouped</p></li>
+<li><p><strong>needed_columns</strong> (<em>List</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – a list of attributes/columns that need to be accessed, by default [] (the empty list stands for all attributes)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p><em>pandas.DataFrame</em> – The next sequence as a dataframe.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.EventLogStorage.print_event_log">
+<span class="sig-name descname"><span class="pre">print_event_log</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.event_log.EventLogStorage.print_event_log" title="Permalink to this definition"></a></dt>
+<dd><p>prints the event log on the console</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.EventLogStorage.save_adapted_event_log">
+<span class="sig-name descname"><span class="pre">save_adapted_event_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'adapted_event_log.csv'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.event_log.EventLogStorage.save_adapted_event_log" title="Permalink to this definition"></a></dt>
+<dd><p>saves the adapted event log that is internally stored in the database in the given file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_name</strong> (<em>str</em><em>, </em><em>optional</em>) – file name where the log should be saved, by default “adapted_event_log.csv”</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.StorageType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.event_log.</span></span><span class="sig-name descname"><span class="pre">StorageType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.event_log.StorageType" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>The storage types specify the data layout that is used internally to store the event logs.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.StorageType.COLUMN_BASED">
+<span class="sig-name descname"><span class="pre">COLUMN_BASED</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#event_log_analyzer.event_log.StorageType.COLUMN_BASED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.StorageType.COLUMN_BASED_AT_ONCE">
+<span class="sig-name descname"><span class="pre">COLUMN_BASED_AT_ONCE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#event_log_analyzer.event_log.StorageType.COLUMN_BASED_AT_ONCE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.event_log.StorageType.ROW_BASED">
+<span class="sig-name descname"><span class="pre">ROW_BASED</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#event_log_analyzer.event_log.StorageType.ROW_BASED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-event_log_analyzer.validate">
+<span id="event-log-analyzer-validate-module"></span><h2>event_log_analyzer.validate module<a class="headerlink" href="#module-event_log_analyzer.validate" title="Permalink to this headline"></a></h2>
+<p>This module is responsible for validating event logs before storing them in the database as well validating the config files.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="event_log_analyzer.validate.validate">
+<span class="sig-prename descclassname"><span class="pre">event_log_analyzer.validate.</span></span><span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.validate.validate" title="Permalink to this definition"></a></dt>
+<dd><p>checks whether the log is sorted by the timestamp column</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>event_log</strong> (<em>DataFrame</em>) – the dataframe of the event log in atomic event log format (‘Timestamp’ column required)</p></li>
+<li><p><strong>Raises</strong> – <dl class="simple">
+<dt>ValueError</dt><dd><p>if the timestamps are incorrect, i.e. no timestamp column is present or if the log is not sorted by this timestamp</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="event_log_analyzer.validate.validate_config">
+<span class="sig-prename descclassname"><span class="pre">event_log_analyzer.validate.</span></span><span class="sig-name descname"><span class="pre">validate_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_schema_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.validate.validate_config" title="Permalink to this definition"></a></dt>
+<dd><p>validates the given config_file, whether it is valid according to the given schema</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_schema</strong> (<em>str</em>) – the path to the JSON schema, where the config file format has been specified</p></li>
+<li><p><strong>config_file</strong> (<em>dict</em>) – the JSON object that was parsed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError if the config file is invalid</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="event-log-analyzer-pattern-library-package">
+<h2>event_log_analyzer.pattern_library package<a class="headerlink" href="#event-log-analyzer-pattern-library-package" title="Permalink to this headline"></a></h2>
+<section id="module-event_log_analyzer.pattern_library.pattern">
+<span id="event-log-analyzer-pattern-library-pattern-module"></span><h3>event_log_analyzer.pattern_library.pattern module<a class="headerlink" href="#module-event_log_analyzer.pattern_library.pattern" title="Permalink to this headline"></a></h3>
+<p>This module implements contains the abstract pattern class that must be extended by any pattern.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern.Pattern">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.pattern_library.pattern.</span></span><span class="sig-name descname"><span class="pre">Pattern</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern.Pattern" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>The abstract Pattern class describes single constraint patterns with all its dependencies.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern.Pattern.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern.Pattern.name" title="Permalink to this definition"></a></dt>
+<dd><p>a unique name, with which each pattern can be identified</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern.Pattern.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern.Pattern.dependencies" title="Permalink to this definition"></a></dt>
+<dd><p>dependencies to other patterns (identified by their name) given as a key value pair where the key stands for the type of dependency (for example necessary conditions)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Dict[str, List[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern.Pattern.applies">
+<span class="sig-name descname"><span class="pre">applies</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern.Pattern.applies" title="Permalink to this definition"></a></dt>
+<dd><p>True if the pattern applies, False if not, None if it has not been checked yet</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern.Pattern.add_dependencies">
+<span class="sig-name descname"><span class="pre">add_dependencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern_structure</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern.Pattern.add_dependencies" title="Permalink to this definition"></a></dt>
+<dd><p>adds all dependencies to other patterns in the pattern structure</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pattern_structure</strong> (<a class="reference internal" href="#event_log_analyzer.pattern_library.pattern_structure.PatternStructure" title="event_log_analyzer.pattern_library.pattern_structure.PatternStructure"><em>PatternStructure</em></a>) – the Pattern Structure object in which the dependencies should be linked</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern.Pattern.check_dependencies">
+<span class="sig-name descname"><span class="pre">check_dependencies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern.Pattern.check_dependencies" title="Permalink to this definition"></a></dt>
+<dd><p>checks whether the pattern already applies without further checking based on dependencies with other classes and logs it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the pattern already applies without further checking, False if it cannot apply anymore, or otherwise None if no statement can be made</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="pre">abstract</span> <span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dependencies</span></span><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id1">
+<em class="property"><span class="pre">abstract</span> <span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#id1" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern.Pattern.pattern_applies">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">pattern_applies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern.Pattern.pattern_applies" title="Permalink to this definition"></a></dt>
+<dd><p>checks whether the pattern applies</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event_log</strong> (<a class="reference internal" href="#event_log_analyzer.event_log.EventLogStorage" title="event_log_analyzer.event_log.EventLogStorage"><em>EventLogStorage</em></a>) – the EventLogStorage object of the log on which the conditions of the pattern should be checked</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the pattern applies, False if it does not apply</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern.Pattern.print_name">
+<span class="sig-name descname"><span class="pre">print_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern.Pattern.print_name" title="Permalink to this definition"></a></dt>
+<dd><p>prints the unique name</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="event-log-analyzer-pattern-library-manufacturing-scheduling-pattern-module">
+<h3>event_log_analyzer.pattern_library.manufacturing_scheduling_pattern module<a class="headerlink" href="#event-log-analyzer-pattern-library-manufacturing-scheduling-pattern-module" title="Permalink to this headline"></a></h3>
+<span class="target" id="module-event_log_analyzer.pattern_library.manufacturing_scheduling_patterns"></span><p>This module contains all patterns, that have the Manufacturing Scheduling Pattern as a prerequisite</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.DistinguishableResource">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.</span></span><span class="sig-name descname"><span class="pre">DistinguishableResource</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.DistinguishableResource" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.pattern_library.pattern.Pattern" title="event_log_analyzer.pattern_library.pattern.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.pattern_library.pattern.Pattern</span></code></a></p>
+<p>In the Distinguishable Resource Pattern, when processing a number of operations, exactly one resource from a set of distinguishable resources needs to be present for each of the operations.</p>
+<p>Currently the pattern only checks one resource (in the ‘Resource’ column), when having several resources, they need to be manufally checked one by one</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.DistinguishableResource.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'forces':</span> <span class="pre">[],</span> <span class="pre">'requires':</span> <span class="pre">['Manufacturing_Scheduling_Pattern']}</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.DistinguishableResource.dependencies" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.DistinguishableResource.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Distinguishable_Resource_Pattern'</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.DistinguishableResource.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.DistinguishableResource.pattern_applies">
+<span class="sig-name descname"><span class="pre">pattern_applies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.DistinguishableResource.pattern_applies" title="Permalink to this definition"></a></dt>
+<dd><p>one resource from a set of distinguishable resources must be present at every operation, but only one operation can be processed per resource
+(checking on atomic event log)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event_log</strong> (<a class="reference internal" href="#event_log_analyzer.event_log.EventLogStorage" title="event_log_analyzer.event_log.EventLogStorage"><em>EventLogStorage</em></a>) – the EventLogStorage object of the log on which the conditions of the pattern should be checked</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the pattern applies, False if it does not apply</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.</span></span><span class="sig-name descname"><span class="pre">FlowShop</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.pattern_library.pattern.Pattern" title="event_log_analyzer.pattern_library.pattern.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.pattern_library.pattern.Pattern</span></code></a></p>
+<p>In the Flow Shop Pattern, each job needs to be processed on each of the machines in a predetermined order and the order is the same for all jobs.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop.cond_a">
+<span class="sig-name descname"><span class="pre">cond_a</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop.cond_a" title="Permalink to this definition"></a></dt>
+<dd><p>every job can be processed on every machine at most once</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop.cond_b">
+<span class="sig-name descname"><span class="pre">cond_b</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop.cond_b" title="Permalink to this definition"></a></dt>
+<dd><p>every job consists of exactly as much operations as machines exist in total</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop.cond_c">
+<span class="sig-name descname"><span class="pre">cond_c</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop.cond_c" title="Permalink to this definition"></a></dt>
+<dd><p>the route of every job through the machines must be the same</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'forces':</span> <span class="pre">[],</span> <span class="pre">'requires':</span> <span class="pre">['Job_Shop_Pattern']}</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop.dependencies" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Flow_Shop_Pattern'</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop.pattern_applies">
+<span class="sig-name descname"><span class="pre">pattern_applies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.FlowShop.pattern_applies" title="Permalink to this definition"></a></dt>
+<dd><p>the pattern applies if all three conditions (a), (b) and (c) apply</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event_log</strong> (<a class="reference internal" href="#event_log_analyzer.event_log.EventLogStorage" title="event_log_analyzer.event_log.EventLogStorage"><em>EventLogStorage</em></a>) – the EventLogStorage object of the log on which the conditions of the pattern should be checked</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the pattern applies, False if it does not apply</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.IndistinguishableResource">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.</span></span><span class="sig-name descname"><span class="pre">IndistinguishableResource</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.IndistinguishableResource" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.pattern_library.pattern.Pattern" title="event_log_analyzer.pattern_library.pattern.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.pattern_library.pattern.Pattern</span></code></a></p>
+<p>In the Indistinguishable Resource Pattern, when processing a number of operations, exactly one resource from a set of indistinguishable resources needs to be present for each operation.</p>
+<p>Currently the pattern only checks one resource (in the ‘Resource’ column), when having several resources, they need to be manufally checked one by one</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.IndistinguishableResource.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'forces':</span> <span class="pre">[],</span> <span class="pre">'requires':</span> <span class="pre">['Manufacturing_Scheduling_Pattern']}</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.IndistinguishableResource.dependencies" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.IndistinguishableResource.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Indistinguishable_Resource_Pattern'</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.IndistinguishableResource.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.IndistinguishableResource.pattern_applies">
+<span class="sig-name descname"><span class="pre">pattern_applies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.IndistinguishableResource.pattern_applies" title="Permalink to this definition"></a></dt>
+<dd><p>for each operation there must be exactly one resource from a set of indistinguishable resources</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event_log</strong> (<a class="reference internal" href="#event_log_analyzer.event_log.EventLogStorage" title="event_log_analyzer.event_log.EventLogStorage"><em>EventLogStorage</em></a>) – the EventLogStorage object of the log on which the conditions of the pattern should be checked</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the pattern applies, False if it does not apply</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.</span></span><span class="sig-name descname"><span class="pre">JobShop</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.pattern_library.pattern.Pattern" title="event_log_analyzer.pattern_library.pattern.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.pattern_library.pattern.Pattern</span></code></a></p>
+<p>In the Job Shop Pattern, each job needs to be processed on a subset of the machines in a predetermined order which might be different between the jobs.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.cond_a">
+<span class="sig-name descname"><span class="pre">cond_a</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.cond_a" title="Permalink to this definition"></a></dt>
+<dd><p>jobs cannot be processed without a machine</p>
+<p>vectorization is used on the whole event log to check whether there exists an event without a machine</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.cond_b">
+<span class="sig-name descname"><span class="pre">cond_b</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.cond_b" title="Permalink to this definition"></a></dt>
+<dd><p>no two operations of the same job can be processed at the same time</p>
+<p>the condition is checked on the atomic event log</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.cond_b_interval">
+<span class="sig-name descname"><span class="pre">cond_b_interval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.cond_b_interval" title="Permalink to this definition"></a></dt>
+<dd><p>no two operations of the same job can be processed at the same time</p>
+<p>the condition is checked on the interval log</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.cond_c">
+<span class="sig-name descname"><span class="pre">cond_c</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.cond_c" title="Permalink to this definition"></a></dt>
+<dd><p>No machine can process more than one operation at the same time</p>
+<p>the condition is checked on the atomic event log</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.cond_c_interval">
+<span class="sig-name descname"><span class="pre">cond_c_interval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.cond_c_interval" title="Permalink to this definition"></a></dt>
+<dd><p>No machine can process more than one operation at the same time</p>
+<p>the condition is checked on the interval log</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'forces':</span> <span class="pre">[],</span> <span class="pre">'requires':</span> <span class="pre">['Manufacturing_Scheduling_Pattern']}</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.dependencies" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Job_Shop_Pattern'</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.pattern_applies">
+<span class="sig-name descname"><span class="pre">pattern_applies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.JobShop.pattern_applies" title="Permalink to this definition"></a></dt>
+<dd><p>the pattern applies if all three conditions (a), (b) and (c) apply</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event_log</strong> (<a class="reference internal" href="#event_log_analyzer.event_log.EventLogStorage" title="event_log_analyzer.event_log.EventLogStorage"><em>EventLogStorage</em></a>) – the EventLogStorage object of the log on which the conditions of the pattern should be checked</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the pattern applies, False if it does not apply</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ManufacturingScheduling">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.</span></span><span class="sig-name descname"><span class="pre">ManufacturingScheduling</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ManufacturingScheduling" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.pattern_library.pattern.Pattern" title="event_log_analyzer.pattern_library.pattern.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.pattern_library.pattern.Pattern</span></code></a></p>
+<p>This Pattern sets the basis for all further Scheduling patterns, it has to be checked before the other patterns can be checked to ensure that the pattern contains all needed information.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ManufacturingScheduling.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'forces':</span> <span class="pre">[],</span> <span class="pre">'requires':</span> <span class="pre">[]}</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ManufacturingScheduling.dependencies" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ManufacturingScheduling.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Manufacturing_Scheduling_Pattern'</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ManufacturingScheduling.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ManufacturingScheduling.pattern_applies">
+<span class="sig-name descname"><span class="pre">pattern_applies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ManufacturingScheduling.pattern_applies" title="Permalink to this definition"></a></dt>
+<dd><p>the pattern applies if all needed attributes are available (Job, Machine, Transaction_Type) and if the transaction_types represent intervals,
+if the pattern applies we create an interval log which is better suited for checking the further pattern conditions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event_log</strong> (<a class="reference internal" href="#event_log_analyzer.event_log.EventLogStorage" title="event_log_analyzer.event_log.EventLogStorage"><em>EventLogStorage</em></a>) – the EventLogStorage object of the log on which the conditions of the pattern should be checked</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the pattern applies, False if it does not apply</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.NoWait">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.</span></span><span class="sig-name descname"><span class="pre">NoWait</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.NoWait" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.pattern_library.pattern.Pattern" title="event_log_analyzer.pattern_library.pattern.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.pattern_library.pattern.Pattern</span></code></a></p>
+<p>In the No Wait Pattern, when a number of jobs are to be processed on a set of machines, jobs are not allowed to wait between operations.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.NoWait.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'forces':</span> <span class="pre">[],</span> <span class="pre">'requires':</span> <span class="pre">['Flow_Shop_Pattern']}</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.NoWait.dependencies" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.NoWait.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'No_Wait_Pattern'</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.NoWait.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.NoWait.pattern_applies">
+<span class="sig-name descname"><span class="pre">pattern_applies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.NoWait.pattern_applies" title="Permalink to this definition"></a></dt>
+<dd><p>jobs are not allowed to wait between operations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event_log</strong> (<a class="reference internal" href="#event_log_analyzer.event_log.EventLogStorage" title="event_log_analyzer.event_log.EventLogStorage"><em>EventLogStorage</em></a>) – the EventLogStorage object of the log on which the conditions of the pattern should be checked</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the pattern applies, False if it does not apply</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.OneBlocking">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.</span></span><span class="sig-name descname"><span class="pre">OneBlocking</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.OneBlocking" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.pattern_library.pattern.Pattern" title="event_log_analyzer.pattern_library.pattern.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.pattern_library.pattern.Pattern</span></code></a></p>
+<p>In the 1-Blocking Pattern, when processing a number of jobs on machines under the Flow Shop pattern, there must at any time be at most one job queuing in front of a machine, so the buffer between any two machines has capacity 1.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.OneBlocking.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'forces':</span> <span class="pre">[],</span> <span class="pre">'requires':</span> <span class="pre">['Permutation_Pattern']}</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.OneBlocking.dependencies" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.OneBlocking.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'1-blocking_Pattern'</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.OneBlocking.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.OneBlocking.pattern_applies">
+<span class="sig-name descname"><span class="pre">pattern_applies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.OneBlocking.pattern_applies" title="Permalink to this definition"></a></dt>
+<dd><p>at any time there cannot be more than one job queing in front of a machine</p>
+<p>Note: The pattern is not implemented yet, therefore the pattern never applies!!!</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event_log</strong> (<a class="reference internal" href="#event_log_analyzer.event_log.EventLogStorage" title="event_log_analyzer.event_log.EventLogStorage"><em>EventLogStorage</em></a>) – the EventLogStorage object of the log on which the conditions of the pattern should be checked</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the pattern applies, False if it does not apply</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.Permutation">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.</span></span><span class="sig-name descname"><span class="pre">Permutation</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.Permutation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.pattern_library.pattern.Pattern" title="event_log_analyzer.pattern_library.pattern.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.pattern_library.pattern.Pattern</span></code></a></p>
+<p>In the Permutation Pattern, when processing a number of jobs on machines under the Flow Shop Pattern no job is allowed to overtake another job, so the order in which jobs are processed on a machine is the same for all machines.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.Permutation.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'forces':</span> <span class="pre">[],</span> <span class="pre">'requires':</span> <span class="pre">['Flow_Shop_Pattern']}</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.Permutation.dependencies" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.Permutation.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Permutation_Pattern'</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.Permutation.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.Permutation.pattern_applies">
+<span class="sig-name descname"><span class="pre">pattern_applies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.Permutation.pattern_applies" title="Permalink to this definition"></a></dt>
+<dd><p>check whether the Permutation Pattern applies, i.e. jobs cannot overtake each other, all machines process the jobs in the same order</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event_log</strong> (<a class="reference internal" href="#event_log_analyzer.event_log.EventLogStorage" title="event_log_analyzer.event_log.EventLogStorage"><em>EventLogStorage</em></a>) – the EventLogStorage object of the log on which the conditions of the pattern should be checked</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the pattern applies, False if it does not apply</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ResourceSetupTimes">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.</span></span><span class="sig-name descname"><span class="pre">ResourceSetupTimes</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ResourceSetupTimes" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#event_log_analyzer.pattern_library.pattern.Pattern" title="event_log_analyzer.pattern_library.pattern.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">event_log_analyzer.pattern_library.pattern.Pattern</span></code></a></p>
+<p>In the Resource Setup Times Pattern, a number of operations are to be processed by some distinguishable resources (Distinguishable Resources Pattern needs to apply) and each resource needs a certain amount of time between two operations, where the time depends on the type of the two tasks.</p>
+<p>Note: The pattern is not implemented yet, therefore the pattern never applies!!!</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ResourceSetupTimes.dependencies">
+<span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'forces':</span> <span class="pre">[],</span> <span class="pre">'requires':</span> <span class="pre">['Distinguishable_Resource_Pattern']}</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ResourceSetupTimes.dependencies" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ResourceSetupTimes.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Resource_Setup_Times_Pattern'</span></em><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ResourceSetupTimes.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ResourceSetupTimes.pattern_applies">
+<span class="sig-name descname"><span class="pre">pattern_applies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.manufacturing_scheduling_patterns.ResourceSetupTimes.pattern_applies" title="Permalink to this definition"></a></dt>
+<dd><p>each resource needs a certain amount of time between two operations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>event_log</strong> (<a class="reference internal" href="#event_log_analyzer.event_log.EventLogStorage" title="event_log_analyzer.event_log.EventLogStorage"><em>EventLogStorage</em></a>) – the EventLogStorage object of the log on which the conditions of the pattern should be checked</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the pattern applies, False if it does not apply</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="event-log-analyzer-pattern-library-pattern-structure-module">
+<h3>event_log_analyzer.pattern_library.pattern_structure module<a class="headerlink" href="#event-log-analyzer-pattern-library-pattern-structure-module" title="Permalink to this headline"></a></h3>
+<span class="target" id="module-event_log_analyzer.pattern_library.pattern_structure"></span><p>This module contains the functionality that organizes the pattern checking process by structuring them in a graph</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern_structure.PatternStructure">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">event_log_analyzer.pattern_library.pattern_structure.</span></span><span class="sig-name descname"><span class="pre">PatternStructure</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern_structure.PatternStructure" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A PatternStructure object contains all patterns in a structured way (an aycyclic directed graph), so that the event log can be checked efficiently pattern by pattern.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern_structure.PatternStructure.dependency_graph">
+<span class="sig-name descname"><span class="pre">dependency_graph</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern_structure.PatternStructure.dependency_graph" title="Permalink to this definition"></a></dt>
+<dd><p>a networkx directed graph object in which the pattern objects are stored</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>networkx.DiGraph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern_structure.PatternStructure.topological_order">
+<span class="sig-name descname"><span class="pre">topological_order</span></span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern_structure.PatternStructure.topological_order" title="Permalink to this definition"></a></dt>
+<dd><p>a list of all patterns in a topological order</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#event_log_analyzer.pattern_library.pattern.Pattern" title="event_log_analyzer.pattern_library.pattern.Pattern">Pattern</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern_structure.PatternStructure.applying_pattern_list">
+<span class="sig-name descname"><span class="pre">applying_pattern_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern_structure.PatternStructure.applying_pattern_list" title="Permalink to this definition"></a></dt>
+<dd><p>returns a list of all patterns that apply</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>pattern_list</strong> – list of all patterns that apply</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="#event_log_analyzer.pattern_library.pattern.Pattern" title="event_log_analyzer.pattern_library.pattern.Pattern">Pattern</a>]</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If the patterns have not been checked yet.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern_structure.PatternStructure.check_all_patterns">
+<span class="sig-name descname"><span class="pre">check_all_patterns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern_structure.PatternStructure.check_all_patterns" title="Permalink to this definition"></a></dt>
+<dd><p>check all patterns that are initialized in the pattern structure in a topological order and log whether they apply</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>log</strong> (<a class="reference internal" href="#event_log_analyzer.event_log.EventLogStorage" title="event_log_analyzer.event_log.EventLogStorage"><em>EventLogStorage</em></a>) – the event log on which the patterns should be classified</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern_structure.PatternStructure.plot_pattern_structure">
+<span class="sig-name descname"><span class="pre">plot_pattern_structure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pattern_structure.pdf'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern_structure.PatternStructure.plot_pattern_structure" title="Permalink to this definition"></a></dt>
+<dd><p>plots the pattern structure in the given file as a matplotlib figure</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file</strong> (<em>str</em><em>, </em><em>optional</em>) – The file name of the output where the graphic should be plotted (default is pattern_structure.pdf)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern_structure.PatternStructure.print_topological_ordering">
+<span class="sig-name descname"><span class="pre">print_topological_ordering</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern_structure.PatternStructure.print_topological_ordering" title="Permalink to this definition"></a></dt>
+<dd><p>prints the topological order in a list object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="event_log_analyzer.pattern_library.pattern_structure.PatternStructure.topological_ordering">
+<span class="sig-name descname"><span class="pre">topological_ordering</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.pattern_library.pattern_structure.PatternStructure.topological_ordering" title="Permalink to this definition"></a></dt>
+<dd><p>finds the topological ordering of the initialized pattern structure and stores it in the topological_order attribute</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="module-event_log_analyzer.utils">
+<span id="event-log-analyzer-utils-module"></span><h2>event_log_analyzer.utils module<a class="headerlink" href="#module-event_log_analyzer.utils" title="Permalink to this headline"></a></h2>
+<p>This module contains various functions that are needed in our tool, e.g. initialization of logging.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="event_log_analyzer.utils.log_time">
+<span class="sig-prename descclassname"><span class="pre">event_log_analyzer.utils.</span></span><span class="sig-name descname"><span class="pre">log_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#event_log_analyzer.utils.log_time" title="Permalink to this definition"></a></dt>
+<dd><p>this function can be used as a decorator, which writes the time needed for the decorated function together with a text to the specified logger</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logger</strong> (<em>Logger</em>) – the logger in which we want to write the information</p></li>
+<li><p><strong>text</strong> (<em>str</em>) – a text printed together with the time in seconds that the decorated method took to execute</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Bernhard Zosel.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

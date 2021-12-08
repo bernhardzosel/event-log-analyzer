@@ -1,0 +1,285 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter {\sphinxsymbolsname}
+  \item \spxentry{\_con}\spxextra{event\_log\_analyzer.event\_log.EventLogStorage attribute}, 
+		\hyperpage{6}
+  \item \spxentry{\_config}\spxextra{event\_log\_analyzer.event\_log.EventLogStorage attribute}, 
+		\hyperpage{7}
+  \item \spxentry{\_dataframe}\spxextra{event\_log\_analyzer.event\_log.EventLogStorage attribute}, 
+		\hyperpage{6}
+  \item \spxentry{\_storage\_type}\spxextra{event\_log\_analyzer.event\_log.EventLogStorage attribute}, 
+		\hyperpage{7}
+
+  \indexspace
+  \bigletter A
+  \item \spxentry{ActivityInstanceAdder}\spxextra{class in event\_log\_analyzer.adapter}, 
+		\hyperpage{4}
+  \item \spxentry{Adapter}\spxextra{class in event\_log\_analyzer.adapter}, \hyperpage{4}
+  \item \spxentry{add\_dependencies()}\spxextra{event\_log\_analyzer.pattern\_library.pattern.Pattern method}, 
+		\hyperpage{9}
+  \item \spxentry{add\_new\_dataframe()}\spxextra{event\_log\_analyzer.event\_log.EventLogStorage method}, 
+		\hyperpage{7}
+  \item \spxentry{applies}\spxextra{event\_log\_analyzer.pattern\_library.pattern.Pattern attribute}, 
+		\hyperpage{9}
+  \item \spxentry{applying\_pattern\_list()}\spxextra{event\_log\_analyzer.pattern\_library.pattern\_structure.PatternStructure method}, 
+		\hyperpage{13}
+
+  \indexspace
+  \bigletter C
+  \item \spxentry{check\_all\_patterns()}\spxextra{event\_log\_analyzer.pattern\_library.pattern\_structure.PatternStructure method}, 
+		\hyperpage{13}
+  \item \spxentry{check\_dependencies()}\spxextra{event\_log\_analyzer.pattern\_library.pattern.Pattern method}, 
+		\hyperpage{9}
+  \item \spxentry{COLUMN\_BASED}\spxextra{event\_log\_analyzer.event\_log.StorageType attribute}, 
+		\hyperpage{8}
+  \item \spxentry{COLUMN\_BASED\_AT\_ONCE}\spxextra{event\_log\_analyzer.event\_log.StorageType attribute}, 
+		\hyperpage{8}
+  \item \spxentry{ColumnRenamer}\spxextra{class in event\_log\_analyzer.adapter}, \hyperpage{4}
+  \item \spxentry{cond\_a()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.FlowShop method}, 
+		\hyperpage{10}
+  \item \spxentry{cond\_a()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.JobShop method}, 
+		\hyperpage{11}
+  \item \spxentry{cond\_b()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.FlowShop method}, 
+		\hyperpage{10}
+  \item \spxentry{cond\_b()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.JobShop method}, 
+		\hyperpage{11}
+  \item \spxentry{cond\_b\_interval()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.JobShop method}, 
+		\hyperpage{11}
+  \item \spxentry{cond\_c()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.FlowShop method}, 
+		\hyperpage{10}
+  \item \spxentry{cond\_c()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.JobShop method}, 
+		\hyperpage{11}
+  \item \spxentry{cond\_c\_interval()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.JobShop method}, 
+		\hyperpage{11}
+  \item \spxentry{create\_interval\_log()}\spxextra{event\_log\_analyzer.event\_log.EventLogStorage method}, 
+		\hyperpage{7}
+
+  \indexspace
+  \bigletter D
+  \item \spxentry{dependencies}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.DistinguishableResource attribute}, 
+		\hyperpage{9}
+  \item \spxentry{dependencies}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.FlowShop attribute}, 
+		\hyperpage{10}
+  \item \spxentry{dependencies}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.IndistinguishableResource attribute}, 
+		\hyperpage{10}
+  \item \spxentry{dependencies}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.JobShop attribute}, 
+		\hyperpage{11}
+  \item \spxentry{dependencies}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.ManufacturingScheduling attribute}, 
+		\hyperpage{11}
+  \item \spxentry{dependencies}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.NoWait attribute}, 
+		\hyperpage{12}
+  \item \spxentry{dependencies}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.OneBlocking attribute}, 
+		\hyperpage{12}
+  \item \spxentry{dependencies}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.Permutation attribute}, 
+		\hyperpage{12}
+  \item \spxentry{dependencies}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.ResourceSetupTimes attribute}, 
+		\hyperpage{13}
+  \item \spxentry{dependencies}\spxextra{event\_log\_analyzer.pattern\_library.pattern.Pattern attribute}, 
+		\hyperpage{9}
+  \item \spxentry{dependencies}\spxextra{event\_log\_analyzer.pattern\_library.pattern.Pattern property}, 
+		\hyperpage{9}
+  \item \spxentry{dependency\_graph}\spxextra{event\_log\_analyzer.pattern\_library.pattern\_structure.PatternStructure attribute}, 
+		\hyperpage{13}
+  \item \spxentry{DistinguishableResource}\spxextra{class in event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns}, 
+		\hyperpage{9}
+
+  \indexspace
+  \bigletter E
+  \item \spxentry{event\_log\_analyzer.adapter}
+    \subitem \spxentry{module}, \hyperpage{4}
+  \item \spxentry{event\_log\_analyzer.event\_log}
+    \subitem \spxentry{module}, \hyperpage{6}
+  \item \spxentry{event\_log\_analyzer.importer}
+    \subitem \spxentry{module}, \hyperpage{3}
+  \item \spxentry{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns}
+    \subitem \spxentry{module}, \hyperpage{9}
+  \item \spxentry{event\_log\_analyzer.pattern\_library.pattern}
+    \subitem \spxentry{module}, \hyperpage{8}
+  \item \spxentry{event\_log\_analyzer.pattern\_library.pattern\_structure}
+    \subitem \spxentry{module}, \hyperpage{13}
+  \item \spxentry{event\_log\_analyzer.utils}
+    \subitem \spxentry{module}, \hyperpage{14}
+  \item \spxentry{event\_log\_analyzer.validate}
+    \subitem \spxentry{module}, \hyperpage{8}
+  \item \spxentry{EventLogStorage}\spxextra{class in event\_log\_analyzer.event\_log}, 
+		\hyperpage{6}
+  \item \spxentry{EventToIntervalLog}\spxextra{class in event\_log\_analyzer.adapter}, 
+		\hyperpage{4}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{FlowShop}\spxextra{class in event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns}, 
+		\hyperpage{10}
+
+  \indexspace
+  \bigletter G
+  \item \spxentry{get\_event\_log()}\spxextra{event\_log\_analyzer.event\_log.EventLogStorage method}, 
+		\hyperpage{7}
+  \item \spxentry{get\_interval\_log()}\spxextra{event\_log\_analyzer.event\_log.EventLogStorage method}, 
+		\hyperpage{7}
+  \item \spxentry{get\_interval\_sequence()}\spxextra{event\_log\_analyzer.event\_log.EventLogStorage method}, 
+		\hyperpage{7}
+  \item \spxentry{get\_sec()}\spxextra{event\_log\_analyzer.adapter.TimestampModifier method}, 
+		\hyperpage{6}
+  \item \spxentry{get\_sequence()}\spxextra{event\_log\_analyzer.event\_log.EventLogStorage method}, 
+		\hyperpage{7}
+
+  \indexspace
+  \bigletter I
+  \item \spxentry{import\_csv\_file()}\spxextra{in module event\_log\_analyzer.importer}, 
+		\hyperpage{3}
+  \item \spxentry{import\_event\_log()}\spxextra{in module event\_log\_analyzer.importer}, 
+		\hyperpage{3}
+  \item \spxentry{import\_xes\_file()}\spxextra{in module event\_log\_analyzer.importer}, 
+		\hyperpage{3}
+  \item \spxentry{IndistinguishableResource}\spxextra{class in event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns}, 
+		\hyperpage{10}
+  \item \spxentry{IntervalToEventLogTransformer}\spxextra{class in event\_log\_analyzer.adapter}, 
+		\hyperpage{5}
+
+  \indexspace
+  \bigletter J
+  \item \spxentry{JobShop}\spxextra{class in event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns}, 
+		\hyperpage{10}
+
+  \indexspace
+  \bigletter L
+  \item \spxentry{log\_time()}\spxextra{in module event\_log\_analyzer.utils}, \hyperpage{14}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{ManufacturingScheduling}\spxextra{class in event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns}, 
+		\hyperpage{11}
+  \item \spxentry{module}
+    \subitem \spxentry{event\_log\_analyzer.adapter}, \hyperpage{4}
+    \subitem \spxentry{event\_log\_analyzer.event\_log}, \hyperpage{6}
+    \subitem \spxentry{event\_log\_analyzer.importer}, \hyperpage{3}
+    \subitem \spxentry{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns}, 
+		\hyperpage{9}
+    \subitem \spxentry{event\_log\_analyzer.pattern\_library.pattern}, \hyperpage{8}
+    \subitem \spxentry{event\_log\_analyzer.pattern\_library.pattern\_structure}, \hyperpage{13}
+    \subitem \spxentry{event\_log\_analyzer.utils}, \hyperpage{14}
+    \subitem \spxentry{event\_log\_analyzer.validate}, \hyperpage{8}
+
+  \indexspace
+  \bigletter N
+  \item \spxentry{name}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.DistinguishableResource attribute}, 
+		\hyperpage{9}
+  \item \spxentry{name}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.FlowShop attribute}, 
+		\hyperpage{10}
+  \item \spxentry{name}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.IndistinguishableResource attribute}, 
+		\hyperpage{10}
+  \item \spxentry{name}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.JobShop attribute}, 
+		\hyperpage{11}
+  \item \spxentry{name}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.ManufacturingScheduling attribute}, 
+		\hyperpage{11}
+  \item \spxentry{name}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.NoWait attribute}, 
+		\hyperpage{12}
+  \item \spxentry{name}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.OneBlocking attribute}, 
+		\hyperpage{12}
+  \item \spxentry{name}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.Permutation attribute}, 
+		\hyperpage{12}
+  \item \spxentry{name}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.ResourceSetupTimes attribute}, 
+		\hyperpage{13}
+  \item \spxentry{name}\spxextra{event\_log\_analyzer.pattern\_library.pattern.Pattern attribute}, 
+		\hyperpage{8}
+  \item \spxentry{name}\spxextra{event\_log\_analyzer.pattern\_library.pattern.Pattern property}, 
+		\hyperpage{9}
+  \item \spxentry{NoWait}\spxextra{class in event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns}, 
+		\hyperpage{12}
+
+  \indexspace
+  \bigletter O
+  \item \spxentry{OneBlocking}\spxextra{class in event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns}, 
+		\hyperpage{12}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{Pattern}\spxextra{class in event\_log\_analyzer.pattern\_library.pattern}, 
+		\hyperpage{8}
+  \item \spxentry{pattern\_applies()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.DistinguishableResource method}, 
+		\hyperpage{9}
+  \item \spxentry{pattern\_applies()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.FlowShop method}, 
+		\hyperpage{10}
+  \item \spxentry{pattern\_applies()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.IndistinguishableResource method}, 
+		\hyperpage{10}
+  \item \spxentry{pattern\_applies()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.JobShop method}, 
+		\hyperpage{11}
+  \item \spxentry{pattern\_applies()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.ManufacturingScheduling method}, 
+		\hyperpage{11}
+  \item \spxentry{pattern\_applies()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.NoWait method}, 
+		\hyperpage{12}
+  \item \spxentry{pattern\_applies()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.OneBlocking method}, 
+		\hyperpage{12}
+  \item \spxentry{pattern\_applies()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.Permutation method}, 
+		\hyperpage{12}
+  \item \spxentry{pattern\_applies()}\spxextra{event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns.ResourceSetupTimes method}, 
+		\hyperpage{13}
+  \item \spxentry{pattern\_applies()}\spxextra{event\_log\_analyzer.pattern\_library.pattern.Pattern method}, 
+		\hyperpage{9}
+  \item \spxentry{PatternStructure}\spxextra{class in event\_log\_analyzer.pattern\_library.pattern\_structure}, 
+		\hyperpage{13}
+  \item \spxentry{Permutation}\spxextra{class in event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns}, 
+		\hyperpage{12}
+  \item \spxentry{plot\_pattern\_structure()}\spxextra{event\_log\_analyzer.pattern\_library.pattern\_structure.PatternStructure method}, 
+		\hyperpage{13}
+  \item \spxentry{print\_event\_log()}\spxextra{event\_log\_analyzer.event\_log.EventLogStorage method}, 
+		\hyperpage{7}
+  \item \spxentry{print\_name()}\spxextra{event\_log\_analyzer.pattern\_library.pattern.Pattern method}, 
+		\hyperpage{9}
+  \item \spxentry{print\_topological\_ordering()}\spxextra{event\_log\_analyzer.pattern\_library.pattern\_structure.PatternStructure method}, 
+		\hyperpage{13}
+
+  \indexspace
+  \bigletter R
+  \item \spxentry{ResourceSetupTimes}\spxextra{class in event\_log\_analyzer.pattern\_library.manufacturing\_scheduling\_patterns}, 
+		\hyperpage{12}
+  \item \spxentry{ROW\_BASED}\spxextra{event\_log\_analyzer.event\_log.StorageType attribute}, 
+		\hyperpage{8}
+  \item \spxentry{RowIDAdder}\spxextra{class in event\_log\_analyzer.adapter}, \hyperpage{5}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{save\_adapted\_event\_log()}\spxextra{event\_log\_analyzer.event\_log.EventLogStorage method}, 
+		\hyperpage{7}
+  \item \spxentry{Sorter}\spxextra{class in event\_log\_analyzer.adapter}, \hyperpage{5}
+  \item \spxentry{StorageType}\spxextra{class in event\_log\_analyzer.event\_log}, \hyperpage{8}
+
+  \indexspace
+  \bigletter T
+  \item \spxentry{TimestampModifier}\spxextra{class in event\_log\_analyzer.adapter}, \hyperpage{6}
+  \item \spxentry{TimestampRenamer}\spxextra{class in event\_log\_analyzer.adapter}, \hyperpage{6}
+  \item \spxentry{topological\_order}\spxextra{event\_log\_analyzer.pattern\_library.pattern\_structure.PatternStructure attribute}, 
+		\hyperpage{13}
+  \item \spxentry{topological\_ordering()}\spxextra{event\_log\_analyzer.pattern\_library.pattern\_structure.PatternStructure method}, 
+		\hyperpage{14}
+  \item \spxentry{transform()}\spxextra{event\_log\_analyzer.adapter.ActivityInstanceAdder method}, 
+		\hyperpage{4}
+  \item \spxentry{transform()}\spxextra{event\_log\_analyzer.adapter.Adapter method}, \hyperpage{4}
+  \item \spxentry{transform()}\spxextra{event\_log\_analyzer.adapter.ColumnRenamer method}, 
+		\hyperpage{4}
+  \item \spxentry{transform()}\spxextra{event\_log\_analyzer.adapter.EventToIntervalLog method}, 
+		\hyperpage{4}
+  \item \spxentry{transform()}\spxextra{event\_log\_analyzer.adapter.IntervalToEventLogTransformer method}, 
+		\hyperpage{5}
+  \item \spxentry{transform()}\spxextra{event\_log\_analyzer.adapter.RowIDAdder method}, 
+		\hyperpage{5}
+  \item \spxentry{transform()}\spxextra{event\_log\_analyzer.adapter.Sorter method}, \hyperpage{5}
+  \item \spxentry{transform()}\spxextra{event\_log\_analyzer.adapter.TimestampModifier method}, 
+		\hyperpage{6}
+  \item \spxentry{transform()}\spxextra{event\_log\_analyzer.adapter.TimestampRenamer method}, 
+		\hyperpage{6}
+  \item \spxentry{transform\_without\_pm4py()}\spxextra{event\_log\_analyzer.adapter.EventToIntervalLog method}, 
+		\hyperpage{5}
+
+  \indexspace
+  \bigletter V
+  \item \spxentry{validate()}\spxextra{in module event\_log\_analyzer.validate}, \hyperpage{8}
+  \item \spxentry{validate\_config()}\spxextra{in module event\_log\_analyzer.validate}, 
+		\hyperpage{8}
+
+\end{sphinxtheindex}

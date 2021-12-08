@@ -1,0 +1,30 @@
+{
+    "path" : "test/data/xes_gen_event_log.xes",    
+    "event_log_format" : "atomic",
+    "separator" : null,
+    "sorted" : false,
+    "row_id_column" : null,
+    "job_column" : "Job",
+    "machine_column" : "Machine",
+    "resource_columns" : [
+        "Resource"
+    ],    
+    "transaction_type_column" : "Transaction_Type",
+    "time_attributes" : [
+        "Timestamp"
+    ],
+    "relative_time" : false,
+    "time_format" : "%Y-%m-%d %H:%M:%S",
+    "activity_instance_column" : null,
+    "group_attributes" : [
+        "Job",
+        "Machine",
+        "Resource"
+    ],
+    "start_transaction_types" : [
+        "start"
+    ],
+    "complete_transaction_types" : [
+        "complete"
+    ]    
+}

@@ -1,0 +1,11 @@
+.vscode
+.python-version
+
+main.py
+*.db
+*.log
+
+__pycache__
+tempCodeRunnerFile.py
+
+.DS_Store

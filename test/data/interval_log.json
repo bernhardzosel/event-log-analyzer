@@ -1,0 +1,29 @@
+{
+    "path" : "test/data/interval_log.csv",    
+    "event_log_format" : "interval",
+    "separator" : ";",
+    "sorted" : false,
+    "row_id_column" : null,
+    "job_column" : "Job",
+    "machine_column" : "Machine",
+    "resource_columns" : [
+        "Resource"
+    ],    
+    "transaction_type_column" : null,
+    "time_attributes" : [
+        "Start",
+        "End"
+    ],
+    "relative_time" : true,
+    "time_format" : "%H:%M:%S",
+    "activity_instance_column" : null,
+    "group_attributes" : [
+        "Job",
+        "Machine",
+        "Resource"
+    ],
+    "start_transaction_types" : [
+    ],
+    "complete_transaction_types" : [
+    ]    
+}

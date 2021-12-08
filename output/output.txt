@@ -1,0 +1,1 @@
+This folder is used by default for all output files that are generated during program execution.

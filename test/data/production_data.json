@@ -1,0 +1,29 @@
+{
+    "path": "test/data/production_data.csv",
+    "event_log_format" : "interval",
+    "separator" : ";", 
+    "sorted" : false,   
+    "row_id_column" : "Row_ID",   
+    "job_column" : "Case ID",            
+    "machine_column" : "Resource",   
+    "resource_columns" : [
+        "Worker ID"
+    ],     
+    "transaction_type_column" : null, 
+    "time_attributes": [
+        "Start Timestamp",
+        "Complete Timestamp"
+    ],
+    "relative_time" : false,
+    "time_format" : "%Y/%m/%d %H:%M:%S.%f",
+    "activity_instance_column" : null,
+    "group_attributes" : [
+        "Job",
+        "Machine"
+    ],
+    
+    "start_transaction_types" : [
+    ],
+    "complete_transaction_types" : [
+    ]
+}

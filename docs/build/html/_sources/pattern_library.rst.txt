@@ -1,0 +1,13 @@
+pattern\_library package
+============================
+
+Submodules
+----------
+
+event\_log\_analyzer.pattern\_library.pattern module
+------------------------------------
+
+.. automodule:: event_log_analyzer.pattern_library.pattern
+   :members:
+   :undoc-members:
+   :show-inheritance:

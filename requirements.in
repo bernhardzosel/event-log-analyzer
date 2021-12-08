@@ -1,0 +1,12 @@
+duckdb
+graphviz
+jsonschema
+matplotlib
+networkx
+numpy
+pandas
+pm4py
+#pygraphviz #only used for plot_pattern_structure() method in event_log_analyzer/pattern_library/pattern_structure.py (see http://pygraphviz.github.io/ for installation steps before being able to load it with pip)
+pytest
+Sphinx
+sphinx-rtd-theme
